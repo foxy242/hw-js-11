@@ -27,19 +27,19 @@
 
 // task3
 
-function findLongestWord(string) {
-const words = string.split(" ")
-let wordLength = words[0];
-for (const word of words) {
-    if (word.length > wordLength.length) {
-        wordLength = word        
-    }
-    word.length 
-}
-return wordLength
-}
-console.log(findLongestWord('Я не знаю що написати'))
-findLongestWord('Я не знаю що написати') 
+// function findLongestWord(string) {
+// const words = string.split(" ")
+// let wordLength = words[0];
+// for (const word of words) {
+//     if (word.length > wordLength.length) {
+//         wordLength = word        
+//     }
+//     word.length 
+// }
+// return wordLength
+// }
+// console.log(findLongestWord('Я не знаю що написати'))
+// findLongestWord('Я не знаю що написати') 
 
 // Напиши функцію findLongestWord(string), 
 // яка приймає параметром довільний рядок (в рядку будуть тільки слова і прогалини)
@@ -48,8 +48,14 @@ findLongestWord('Я не знаю що написати')
 // task4
 
 // function formatString(string) {
-  
+//     const stringLength = string.length
+//     if (stringLength < 40) {
+//         return string
+//     } else {
+//         console.log(string.slice(0, 40))
+//     }
 // }
+// formatString(`Learning javascript so I can make Websites on google`);
 
 // Напиши функцію formatString(string) яка приймає рядок і форматує його якщо необхідно.
 // Якщо довжина рядка не перевищує 40 символів, функція повертає її в початковому вигляді.
@@ -58,9 +64,15 @@ findLongestWord('Я не знаю що написати')
 
 // task5
 
-// function checkForSpam(message) {
-  
-// }
+function checkForSpam(message) {
+    const messageCheck = message.split(' ')
+    if (messageCheck.includes("spam" || "sale")) {
+        alert("There's a forbidden messge on your text")
+    } else {
+        alert("There's no forbidden messge on your text")
+    }
+}
+checkForSpam("School is always spamming too much homework")
 
 // Напиши функцію checkForSpam(message), приймаючу 1 параметр message — рядок. 
 // Функція перевіряє її на вміст слів spam і sale. 
@@ -69,8 +81,16 @@ findLongestWord('Я не знаю що написати')
 
 // task6
 
-
-
+function sendNumber() {
+    const askArray = []
+    let askNumber
+    do {
+        askNumber = prompt("Введіть число")
+        askArray.push(askNumber)
+    } while (askNumber !== null)
+    return askArray
+}
+console.log(sendNumber())
 // Напиши скрипт з наступним функціоналом:
 // При завантаженні сторінки користувачеві пропонується в prompt ввести число.
 // Введення зберігається в змінну input і додається в масив чисел numbers.
